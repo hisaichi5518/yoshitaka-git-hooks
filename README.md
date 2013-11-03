@@ -1,6 +1,11 @@
-# 俺得git hooks
+# 吉高由里子git hooks
 
 ## コミットしたら吉高由里子の声が流れる
 
-itunesがなってる場合、一旦止まって吉高由里子の声に集中出来る。
-もちろん、終わったら、itunesは再開
+```
+PROJECT_DIR="."
+CURRENT_DIR=`pwd`
+ln -s $CURRENT_DIR/play-yoshitaka-voice.sh $PROJECT_DIR/.git/hooks/post-commit
+mkdir -p $PROJECT_DIR/.git/hooks/yoshitaka-voices/
+mv 再生したいmp3ファイル $PROJECT_DIR/.git/hooks/yoshitaka-voices/
+```
